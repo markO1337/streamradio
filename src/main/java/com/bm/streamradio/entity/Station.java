@@ -16,6 +16,6 @@ public abstract class Station {
     private String name;
     private String description;
     private URL url;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Category collection;
 }

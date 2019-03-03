@@ -3,6 +3,7 @@ package com.bm.streamradio.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -17,6 +18,8 @@ public class Account {
     private List<Category> categories;
 
     public void addCategory(Category category) {
+        if(categories == null)
+            categories = new ArrayList<>();
         this.categories.add(category);
     }
 }
